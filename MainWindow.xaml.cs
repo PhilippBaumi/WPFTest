@@ -19,7 +19,6 @@ namespace WPFTest
     public partial class MainWindow : Window
     {
         private readonly ViewModel viewModel = new();
-        private ObservableCollection<string> list = new();
         public MainWindow()
         {
             InitializeComponent();
