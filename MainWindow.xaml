@@ -7,9 +7,25 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid Margin="270,0,0,0">
-        <DatePicker x:Name="datePickerDate" SelectedDate="{Binding SelectedDate, Mode=TwoWay}" HorizontalAlignment="Left" Margin="-247,35,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnAdd" Content="Hinzufügen" HorizontalAlignment="Left" Margin="-247,82,0,0" VerticalAlignment="Top" Click="AddDateToList"   />
-        <ListView x:Name="listViewDates" ItemsSource="{Binding Dates}" Margin="64,22,28,36" SelectedItem="{Binding SelectionText, Mode=TwoWay}" SelectionChanged="OnSelectionChanged">
+        <DatePicker 
+            x:Name="datePickerDate" 
+            SelectedDate="{Binding SelectedDate, Mode=TwoWay}" 
+            HorizontalAlignment="Left" 
+            Margin="-247,35,0,0" 
+            VerticalAlignment="Top"/>
+        <Button 
+            x:Name="btnAdd" 
+            Content="Hinzufügen" 
+            HorizontalAlignment="Left" 
+            Margin="-247,82,0,0" 
+            VerticalAlignment="Top" 
+            Click="AddDateToList"   />
+        <ListView 
+            x:Name="listViewDates" 
+            ItemsSource="{Binding Dates}" 
+            Margin="64,22,28,36" 
+            SelectedItem="{Binding SelectionText, Mode=TwoWay}" 
+            SelectionChanged="OnSelectionChanged">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
