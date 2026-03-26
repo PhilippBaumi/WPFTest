@@ -35,10 +35,9 @@ namespace WPFTest
             string date = viewModel.SelectedDate.Value.ToString("dd.MM.yyyy");
             if (viewModel.Dates.Contains(date))
             {
-                MessageBox.Show("Datum bereits in der Liste", "Datum vorhanden", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Datum "+date+" bereits in der Liste", "Datum vorhanden", MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
             }
-            
             viewModel.Dates.Add(date);
         }
 
@@ -46,8 +45,8 @@ namespace WPFTest
         {
             if (viewModel.SelectedDate != null)
             {
-                DateTime? date = viewModel.SelectedDate;
-                MessageBox.Show(date.Value.ToString("dd.MM.yyyy"), "Gewähltes Datum", MessageBoxButton.OK, MessageBoxImage.Information);
+                string? date=viewModel.SelectedText;
+                MessageBox.Show("Du hast "+date+" aus der Liste gewählt", "Gewähltes Datum", MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
             }
         }

@@ -24,7 +24,7 @@
             x:Name="listViewDates" 
             ItemsSource="{Binding Dates}" 
             Margin="64,22,28,36" 
-            SelectedItem="{Binding SelectionText, Mode=TwoWay}" 
+            SelectedItem="{Binding SelectedText, Mode=TwoWay}" 
             SelectionChanged="OnSelectionChanged">
             <ListView.View>
                 <GridView>
