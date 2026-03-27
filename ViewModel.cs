@@ -22,10 +22,10 @@ namespace WPFTest
                 }
             }
         }
-         
+
         public string? SelectedText
         {
-            get=> selectedText;
+            get => selectedText;
             set
             {
                 if (selectedText != value)

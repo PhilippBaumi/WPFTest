@@ -1,15 +1,5 @@
-﻿using System.Collections.ObjectModel;
-using System.Diagnostics.Eventing.Reader;
-using System.Text;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace WPFTest
 {
@@ -35,7 +25,7 @@ namespace WPFTest
             string date = viewModel.SelectedDate.Value.ToString("dd.MM.yyyy");
             if (viewModel.Dates.Contains(date))
             {
-                MessageBox.Show("Datum "+date+" bereits in der Liste", "Datum vorhanden", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Datum " + date + " bereits in der Liste", "Datum vorhanden", MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
             }
             viewModel.Dates.Add(date);
@@ -45,8 +35,8 @@ namespace WPFTest
         {
             if (viewModel.SelectedDate != null)
             {
-                string? date=viewModel.SelectedText;
-                MessageBox.Show("Du hast "+date+" aus der Liste gewählt", "Gewähltes Datum", MessageBoxButton.OK, MessageBoxImage.Information);
+                string? date = viewModel.SelectedText;
+                MessageBox.Show("Du hast " + date + " aus der Liste gewählt", "Gewähltes Datum", MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
             }
         }
